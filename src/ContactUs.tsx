@@ -21,7 +21,7 @@ const ContactUs = () => {
                             <span className="text-gray-800"> Us</span>
                         </h1>
                         <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                            We're here to help you find the perfect match. Whether you're a company looking for talent 
+                            We're here to help you find the perfect match. Whether you're a company looking for talent
                             or a job seeker exploring opportunities, we're ready to assist you.
                         </p>
                     </motion.div>
@@ -43,8 +43,8 @@ const ContactUs = () => {
                                     For Companies
                                 </h2>
                                 <p className="text-gray-700 mb-8 leading-relaxed">
-                                    Looking to hire top talent? Let us help you find the perfect candidates 
-                                    for your team. Our recruitment experts are ready to understand your needs 
+                                    Looking to hire top talent? Let us help you find the perfect candidates
+                                    for your team. Our recruitment experts are ready to understand your needs
                                     and deliver exceptional results.
                                 </p>
                                 <button
@@ -52,7 +52,7 @@ const ContactUs = () => {
                                     className="w-full px-8 py-4 rounded-lg text-white font-semibold hover:opacity-90 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
                                     style={{ backgroundColor: '#99BC85' }}
                                 >
-                                    Contact Us as Company <FiArrowRight />
+                                    Click Here <FiArrowRight />
                                 </button>
                             </div>
                         </motion.div>
@@ -72,8 +72,8 @@ const ContactUs = () => {
                                     For Job Seekers
                                 </h2>
                                 <p className="text-gray-700 mb-8 leading-relaxed">
-                                    Ready to take the next step in your career? We're here to connect you 
-                                    with exciting opportunities that match your skills and aspirations. 
+                                    Ready to take the next step in your career? We're here to connect you
+                                    with exciting opportunities that match your skills and aspirations.
                                     Let's find your dream job together.
                                 </p>
                                 <button
@@ -81,7 +81,7 @@ const ContactUs = () => {
                                     className="w-full px-8 py-4 rounded-lg text-white font-semibold hover:opacity-90 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
                                     style={{ backgroundColor: '#99BC85' }}
                                 >
-                                    Contact Us as Job Seeker <FiArrowRight />
+                                    Click Here <FiArrowRight />
                                 </button>
                             </div>
                         </motion.div>
@@ -106,9 +106,9 @@ const ContactUs = () => {
                             <p className="text-gray-700 leading-relaxed mb-6">
                                 Stay updated with our latest job postings, company news, and industry insights.
                             </p>
-                            <a 
-                                href="https://www.linkedin.com/company/headhr-consultancy-services/posts/?feedView=all" 
-                                target="_blank" 
+                            <a
+                                href="https://www.linkedin.com/company/headhr-consultancy-services/posts/?feedView=all"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center px-6 py-3 rounded-lg text-white font-semibold hover:opacity-90 transition-all transform hover:scale-105 shadow-lg gap-2"
                                 style={{ backgroundColor: '#99BC85' }}
