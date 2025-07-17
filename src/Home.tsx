@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiSearch, FiUsers, FiHeart, FiStar, FiCheckCircle } from 'react-icons/fi'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+    const navigate = useNavigate()
+
     return (
         <div className="min-h-screen">
             {/* Hero Section with Background */}
@@ -29,7 +32,9 @@ const Home = () => {
                             with growing companies to build successful teams together.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="px-8 py-4 rounded-lg text-white font-semibold hover:opacity-90 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+                            <button 
+                                onClick={() => navigate('/contact')}
+                                className="px-8 py-4 rounded-lg text-white font-semibold hover:opacity-90 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
                                 style={{ backgroundColor: '#99BC85' }}>
                                 Contact Us <FiArrowRight />
                             </button>
@@ -306,6 +311,7 @@ const Home = () => {
                             Let's work together to find the perfect talent for your team or the ideal opportunity for your career.
                         </p>
                         <button
+                            onClick={() => navigate('/contact')}
                             className="px-8 py-4 text-lg font-semibold rounded-lg hover:opacity-90 transition-all transform hover:scale-105 shadow-lg"
                             style={{
                                 backgroundColor: '#99BC85',

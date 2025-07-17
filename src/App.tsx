@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FiMenu, FiX, FiMail, FiPhone, FiSend, FiChevronDown, FiUpload } from 'react-icons/fi'
+import { FiMenu, FiX, FiMail, FiPhone, FiSend, FiChevronDown, FiUpload, FiLinkedin } from 'react-icons/fi'
 import Home from './Home'
 import AboutUs from './components/AboutUs'
 import OurServices from './components/OurServices'
+import ContactUs from './ContactUs'
 
 // ...existing code...
 
@@ -31,7 +32,7 @@ function AppContent() {
 
   const contactDropdownItems = [
     { id: 'contact-company', label: 'As a Company', path: '/contact/company' },
-    { id: 'contact-seeker', label: 'As a Seeker', path: '/contact/seeker' }
+    { id: 'contact-seeker', label: 'As a Job Seeker', path: '/contact/seeker' }
   ]
 
   const isActive = (path: string) => location.pathname === path
@@ -227,18 +228,89 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<OurServices />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/contact/company" element={<ContactCompany />} />
           <Route path="/contact/seeker" element={<ContactSeeker />} />
         </Routes>
       </main>
+
+      {/* Footer */}
+      <footer className="py-8 mt-16" style={{ backgroundColor: '#99BC85' }}>
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Company Info */}
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <img 
+                  src="/Logo.png" 
+                  alt="HeadHR Logo" 
+                  className="h-8 w-auto brightness-0 invert"
+                />
+              </div>
+              <p className="text-white text-sm leading-relaxed">
+                Your trusted partner in finding the right talent. We connect passionate professionals
+                with growing companies to build successful teams together.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+              <div className="space-y-2">
+                <Link to="/" className="block text-white hover:text-gray-200 transition-colors text-sm">
+                  Home
+                </Link>
+                <Link to="/about" className="block text-white hover:text-gray-200 transition-colors text-sm">
+                  About Us
+                </Link>
+                <Link to="/services" className="block text-white hover:text-gray-200 transition-colors text-sm">
+                  Our Services
+                </Link>
+                <Link to="/contact" className="block text-white hover:text-gray-200 transition-colors text-sm">
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-white font-semibold mb-4">Contact Information</h4>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <FiMail size={16} className="text-white" />
+                  <span className="text-white text-sm">Info@headhr.co.in</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <FiPhone size={16} className="text-white" />
+                  <span className="text-white text-sm">+91 7808026334</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <FiLinkedin size={16} className="text-white" />
+                  <a 
+                    href="https://www.linkedin.com/company/headhr-consultancy-services/posts/?feedView=all" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-200 transition-colors text-sm"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-white/20 pt-6">
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              <p className="text-white text-sm">
+                © 2025 HeadHR Consultancy Services. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
-}
-
-// Contact Component (Default - redirects to company)
-const Contact = () => {
-  return <ContactCompany />
 }
 
 // Contact Company Component
@@ -449,6 +521,23 @@ const ContactCompany = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800">Phone</h4>
                     <p className="text-gray-600">+91 7808026334</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 rounded-lg" style={{ backgroundColor: '#E4EFE7' }}>
+                  <div className="p-3 rounded-full mr-4" style={{ backgroundColor: '#99BC85' }}>
+                    <FiLinkedin size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">LinkedIn</h4>
+                    <a 
+                      href="https://www.linkedin.com/company/headhr-consultancy-services/posts/?feedView=all" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors break-all"
+                    >
+                      Visit our LinkedIn
+                    </a>
                   </div>
                 </div>
               </div>
@@ -734,6 +823,23 @@ const ContactSeeker = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800">Phone</h4>
                     <p className="text-gray-600">+91 7808026334</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 rounded-lg" style={{ backgroundColor: '#E4EFE7' }}>
+                  <div className="p-3 rounded-full mr-4" style={{ backgroundColor: '#99BC85' }}>
+                    <FiLinkedin size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">LinkedIn</h4>
+                    <a 
+                      href="https://www.linkedin.com/company/headhr-consultancy-services/posts/?feedView=all" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors break-all"
+                    >
+                      Visit our LinkedIn
+                    </a>
                   </div>
                 </div>
               </div>
